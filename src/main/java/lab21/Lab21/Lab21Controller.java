@@ -44,4 +44,20 @@ public class Lab21Controller {
 		mav.addObject("result",result);
 		return mav;
 	}
+	
+	@RequestMapping("/div-form")
+	public ModelAndView showDivForm() {
+		return new ModelAndView("div-form");
+	}
+	@RequestMapping("/div-result")
+	public ModelAndView showDivResult(@RequestParam("num1") double num1, @RequestParam("num2") double num2) {
+		double result = num1/num2;
+		int remainder = (int) (num1%num2);
+		ModelAndView mav = new ModelAndView("div-result");
+		mav.addObject("num1", num1);
+		mav.addObject("num2",num2);
+		mav.addObject("result",result);
+		mav.addObject("remainder",remainder);
+		return mav;
+	}
 }

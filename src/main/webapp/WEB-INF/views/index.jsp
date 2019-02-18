@@ -11,5 +11,6 @@
 <p>Welcome!</p>
 <a href="/mileage-form">Calculate Mileage</a>
 <a href="/add-form">Add Numbers</a>
+<a href="/div-form">Divide Numbers</a>
 </body>
 </html>
