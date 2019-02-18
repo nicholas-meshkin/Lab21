@@ -60,4 +60,22 @@ public class Lab21Controller {
 		mav.addObject("remainder",remainder);
 		return mav;
 	}
+	
+	@RequestMapping("/repeat-form")
+	public ModelAndView showRepForm() {
+		return new ModelAndView("repeat-form");
+	}
+	@RequestMapping("/repeat-result")
+	public ModelAndView showRepResult(@RequestParam("word") String word, @RequestParam("num") int num) {
+		
+		ModelAndView mav = new ModelAndView("repeat-result");
+	
+		String result = "";
+		for (int i=0;i<num;i++) {
+			result += word+" ";
+		}
+		
+		mav.addObject("result",result);
+		return mav;
+	}
 }
