@@ -30,4 +30,18 @@ public class Lab21Controller {
 		
 		return mav;
 	}
+	
+	@RequestMapping("/add-form")
+	public ModelAndView showAddForm() {
+		return new ModelAndView("add-form");
+	}
+	@RequestMapping("/add-result")
+	public ModelAndView showAddResult(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
+		int result = num1+num2;
+		ModelAndView mav = new ModelAndView("add-result");
+		mav.addObject("num1", num1);
+		mav.addObject("num2",num2);
+		mav.addObject("result",result);
+		return mav;
+	}
 }

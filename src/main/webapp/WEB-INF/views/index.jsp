@@ -9,6 +9,7 @@
 </head>
 <body>
 <p>Welcome!</p>
-<a href="/mileage-form">FirstLink</a>
+<a href="/mileage-form">Calculate Mileage</a>
+<a href="/add-form">Add Numbers</a>
 </body>
 </html>
